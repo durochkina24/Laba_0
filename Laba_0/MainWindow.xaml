@@ -85,6 +85,19 @@
                     </StackPanel>
                 </StackPanel>
             </GroupBox>
+            <GroupBox Header="Перемещение" Padding="6" Margin="0,0,10,10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="dX" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtDX" Width="50" Margin="0,0,10,0"/>
+                        <TextBlock Text="dY" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtDY" Width="50"/>
+                    </StackPanel>
+                    <Button x:Name="BtnMoveAll" Content="Переместить все"
+                Click="BtnMoveAll_Click"
+                Padding="8,3"/>
+                </StackPanel>
+            </GroupBox>
 
             <GroupBox Header="Сцена" Padding="6" Margin="0,0,0,10">
                 <Button x:Name="BtnClear" Content="Очистить всё"

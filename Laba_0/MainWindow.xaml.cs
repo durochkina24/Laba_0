@@ -94,6 +94,24 @@ namespace ShapesDrawing
                 MessageBox.Show("Введите корректные числовые значения координат, ширины и высоты.");
             }
         }
+        private void BtnMoveAll_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                int dx = int.Parse(TxtDX.Text);
+                int dy = int.Parse(TxtDY.Text);
+                foreach (var shape in shapes)
+                {
+                    shape.Move(dx, dy);
+                }
+                RedrawAll();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Введите корректные числовые значения смещения dX и dY.");
+            }
+        }
+
 
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
