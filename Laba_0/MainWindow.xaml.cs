@@ -35,6 +35,22 @@ namespace ShapesDrawing
             RedrawAll();
         }
 
+        private void BtnManualRectangle_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Point2D start = new Point2D(int.Parse(TxtRX.Text), int.Parse(TxtRY.Text));
+                int width = int.Parse(TxtRW.Text);
+                int height = int.Parse(TxtRH.Text);
+                shapes.Add(new Quadrilateral(start, width, height));
+                RedrawAll();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Введите корректные числовые значения координат, ширины и высоты.");
+            }
+        }
+
         private void BtnClear_Click(object sender, RoutedEventArgs e)
         {
             shapes.Clear();

@@ -38,6 +38,28 @@
                 </StackPanel>
             </GroupBox>
 
+            <GroupBox Header="Прямоугольник / квадрат" Padding="6" Margin="0,0,10,10">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                        <TextBlock Text="X" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtRX" Width="42" Margin="0,0,10,0"/>
+                        <TextBlock Text="Y" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtRY" Width="42"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="Ширина" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtRW" Width="42" Margin="0,0,10,0"/>
+                        <TextBlock Text="Высота" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtRH" Width="42"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnManualRectangle" Content="Задать"
+                    Click="BtnManualRectangle_Click"
+                    Padding="8,3"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+
             <GroupBox Header="Сцена" Padding="6" Margin="0,0,0,10">
                 <Button x:Name="BtnClear" Content="Очистить всё"
                         Click="BtnClear_Click"
