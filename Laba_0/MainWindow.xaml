@@ -27,13 +27,33 @@
         </Border>
 
         <WrapPanel Grid.Row="1" Margin="0,10,0,0">
-
             <GroupBox Header="Треугольник" Padding="6" Margin="0,0,10,10">
                 <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                        <TextBlock Text="X1" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtTX1" Width="42" Margin="0,0,10,0"/>
+                        <TextBlock Text="Y1" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtTY1" Width="42"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,4">
+                        <TextBlock Text="X2" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtTX2" Width="42" Margin="0,0,10,0"/>
+                        <TextBlock Text="Y2" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtTY2" Width="42"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+                        <TextBlock Text="X3" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtTX3" Width="42" Margin="0,0,10,0"/>
+                        <TextBlock Text="Y3" VerticalAlignment="Center" Margin="0,0,4,0"/>
+                        <TextBox x:Name="TxtTY3" Width="42"/>
+                    </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <Button x:Name="BtnRandomTriangle" Content="Случайный"
-                                Click="BtnRandomTriangle_Click"
-                                Padding="8,3" Margin="0,0,6,0"/>
+                        Click="BtnRandomTriangle_Click"
+                        Padding="8,3" Margin="0,0,6,0"/>
+                        <Button x:Name="BtnManualTriangle" Content="Задать"
+                        Click="BtnManualTriangle_Click"
+                        Padding="8,3"/>
                     </StackPanel>
                 </StackPanel>
             </GroupBox>
@@ -53,9 +73,15 @@
                         <TextBox x:Name="TxtRH" Width="42"/>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
+                        <Button x:Name="BtnRandomRectangle" Content="Случ. прямоуг."
+                        Click="BtnRandomRectangle_Click"
+                        Padding="8,3" Margin="0,0,6,0"/>
+                        <Button x:Name="BtnRandomSquare" Content="Случ. квадрат"
+                        Click="BtnRandomSquare_Click"
+                        Padding="8,3" Margin="0,0,6,0"/>
                         <Button x:Name="BtnManualRectangle" Content="Задать"
-                    Click="BtnManualRectangle_Click"
-                    Padding="8,3"/>
+                        Click="BtnManualRectangle_Click"
+                        Padding="8,3"/>
                     </StackPanel>
                 </StackPanel>
             </GroupBox>
